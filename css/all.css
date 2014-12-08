@@ -8015,6 +8015,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	.jcf-select-language .jcf-select-drop-content .jcf-scrollable-area,
 	.jcf-select-language .jcf-select-drop-content .jcf-list-content{max-height:220px !important;}
 }
+.main-tabs-nav{
+		position:fixed;
+		top:15px;
+		margin-top:0;
+	}
 .loading {
 	display: none;
 }
