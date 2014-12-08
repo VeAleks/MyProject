@@ -8029,3 +8029,17 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	cursor: pointer;
 }
 .waiting * { cursor: progress }
+.loading {
+	display: none;
+}
+.loading-page {
+	position: absolute;
+	z-index: 5;
+}
+.inactive_page {
+	opacity: 0.3;
+}
+.post-row {
+	cursor: pointer;
+}
+.waiting * { cursor: progress }
