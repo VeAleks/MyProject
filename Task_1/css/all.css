@@ -1,0 +1,29 @@
+body{
+	font:13px Arial, Helvetica, sans-serif;
+	background:#fff;
+	color: #000;
+	margin:10px;
+}
+.holder {
+	overflow: hidden;
+	padding: 20px 0;
+	width: 100%;
+}
+#holder {
+	width: 700px;
+	margin: 0 auto;
+}
+#holder div{
+	width: 145px;
+	float: left;
+	padding: 5px;
+	margin-right: 10px;
+}
+#holder div.box{
+	font-style: italic;
+	font-weight: bold;
+	color: #00F;
+	width: 100%;
+	margin: 0;
+	float: none;
+}
