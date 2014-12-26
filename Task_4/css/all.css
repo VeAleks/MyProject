@@ -1,0 +1,59 @@
+body{
+	font:13px Arial, Helvetica, sans-serif;
+	background:#fff;
+	color: #000;
+	margin:10px;
+}
+.holder{
+	overflow:hidden;
+	padding:20px 0;
+	width:100%;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+#block1{
+	width:100px;
+	background:#afa;
+	float:left;
+	margin-right:5px;
+}
+#block2{
+	width:100px;
+	background:#faa;
+	float:left;
+}
+#list-holder{
+	width:600px;
+	margin:0 auto;
+}
+#list-holder .box{
+	width:148px;
+	float:left;
+	background:#faf;
+	margin-right:2px;
+}
+.element{
+	float:left;
+	width:90px;
+	padding:9px 5px;
+	border:5px solid #000;
+	margin-right:5px;
+}
+.container{
+	float:left;
+	width:100px;
+	padding:7px 5px;
+	background:red;
+	margin-right:5px;
+}
+.my-box{
+	float:left;
+	width:130px;
+	margin-right:5px;
+	background:green;
+}
+
+
