@@ -1,0 +1,20 @@
+body{
+	font:13px Arial, Helvetica, sans-serif;
+	background:#fff;
+	color: #000;
+	margin:10px;
+}
+#list-holder{
+	width:600px;
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+}
+#list-holder li{
+	width:180px;
+	float:left;
+	height:200px;
+	margin-right:10px;
+	background:#fee;
+}
+ #list-holder img{ float:left;}
