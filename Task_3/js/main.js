@@ -17,8 +17,8 @@ function unitPage() {
 }
 
 function addClass(elem, cname) {
-	if (elem.className === '') elem.className += cname ;
-	else elem.className += ' ' + cname ;
+	if (elem.className === '') elem.className += cname;
+	else elem.className += ' ' + cname;
 }
 
 if(window.addEventListener) window.addEventListener('load', unitPage, false);
