@@ -41,12 +41,6 @@ function sameHeigthDivs(parent , element1, element2, element3) {
 		
 		var divs = parentDivs[i].children;
 		console.log(divs);
-		for (var j = 0; j < divs.length; j--) {
-
-				var height1 = getComputedStyle(divs[j]);
-				console.log(height1);
-
-		};
 	}
 }
 
