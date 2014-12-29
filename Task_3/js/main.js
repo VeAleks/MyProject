@@ -1,16 +1,12 @@
 'use strict';
 function unitPage() {
-	var listItems = document.getElementsByClassName('list'),
-	item,
-	itemFirst,
-	itemLast;
+	var listItems = document.getElementsByClassName('list');
 
 	for (var i = 0; i < listItems.length; i++) {
-		var items = listItems[i];
+		var item = listItems[i].children,
+			itemFirst = item[0],
+			itemLast = item[item.length - 1];
 
-		item = items.children;
-		itemFirst = item[0];
-		itemLast = item[item.length - 1];
 		addClass(itemFirst, 'first' );
 		addClass(itemLast, 'last' );
 	}

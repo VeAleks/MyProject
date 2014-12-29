@@ -3,7 +3,6 @@ function unitPage() {
 	sameHeigthBlocks('block1', 'block2');
 	sameHeigthBoxes('list-holder');
 	sameHeigthDivs('element', 'container', 'my-box');
-
 }
 
 function sameHeigthBlocks(element1, element2){
@@ -46,7 +45,6 @@ function sameHeigthDivs(element1, element2, element3) {
 	addHeight(classElement3, maxHeight);
 }
 
-
 function findHeight (element, array) {
 	for (var i = 0; i < element.length; i++) {
 		var heightBox = element[i].offsetHeight;
@@ -54,6 +52,7 @@ function findHeight (element, array) {
 		array.push(parseInt(heightBox));
 	}
 }
+
 function addHeight (element, maxHeight){
 	for (var i = 0; i < element.length; i++) {
 		var paddingTop = parseInt(getComputedStyle(element[i]).paddingTop),
