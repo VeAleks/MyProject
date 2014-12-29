@@ -6,9 +6,8 @@ function unitPage() {
 		var item = listItems[i].children;
 
 		nthChild(item);
-		addSpan(item);
+		addSpan(item, listItems[0]);
 	}
-
 }
 
 function nthChild (element) {
@@ -22,24 +21,15 @@ function addClass (element, cname) {
 	else element.className += ' ' + cname;
 }
 
-function addSpan (element) {
+function addSpan (element, list) {
 	for (var i = 0; i < element.length; i++) {
-		var spanNum = document.createElement('span'),
-			refNode = element[i].innerText;
+		var spanNum = document.createElement('span');
 
 		spanNum.innerText = i + 1;
-		element[i].appendChild(spanNum);
-		console.dir(element[0]);
-		//element[i].insertBefore(spanNum, element[i].outerText);
-		element[i].firstChild = span;
-		element[i].lastChild = text;
-		
+		element[i].insertBefore(spanNum,element[i].firstChild);
 	}
 
 }
-
-
-
 
 if(window.addEventListener) window.addEventListener('load', unitPage, false);
 else if(window.attachEvent) window.attachEvent('onload', unitPage);
