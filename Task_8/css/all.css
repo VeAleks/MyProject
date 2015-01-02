@@ -1,0 +1,18 @@
+body{
+	font:13px Arial, Helvetica, sans-serif;
+	background:#fff;
+	color: #000;
+	margin:10px;
+}
+.holder{
+	overflow:hidden;
+	padding:20px 0;
+	width:100%;
+}
+
+a{cursor:pointer;}
+.active a {font-weight: bold;}
+.holder div.box{
+	border:1px solid red;
+	display:none;
+}
