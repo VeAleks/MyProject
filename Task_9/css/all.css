@@ -1,0 +1,41 @@
+body{
+	font:13px Arial, Helvetica, sans-serif;
+	background:#fff;
+	color: #000;
+	margin:10px;
+}
+#gallery{
+	width:83px;
+	height:60px;
+	margin:100px auto 10px;
+	padding:10px;
+	border:1px solid red;
+	list-style:none;
+	position:relative;
+}
+#gallery li{
+	width:83px;
+	height:60px;
+	overflow:hidden;
+	position:absolute;
+	top:10px;
+	left:10px;
+	z-index:1;
+}
+#gallery li.active{ z-index:2;}
+#gallery img{ display:block;}
+.nav{
+	font-size:12px;
+	width:200px;
+	margin:0 auto;
+	padding:10px;
+	border:1px solid green;
+	overflow:hidden;
+}
+#btn-stop{ float:right;}
+#btn{
+	display:block;
+	cursor:pointer;
+	text-align:center;
+	background:yellow;
+}
