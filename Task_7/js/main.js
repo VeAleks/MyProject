@@ -26,12 +26,12 @@ function unitPage() {
 
 function addClass(elem, cname, box) {
 	var hasClass = function (elem, cname, box ) {
-			var newArray = elem.className.split(' ');
+		var newArray = elem.className.split(' ');
 
-			for (var i = 0; i < newArray.length; i++){
+		for (var i = 0; i < newArray.length; i++){
 			if(newArray[i] === cname) return true;
-			}
-			newArray.join('');
+		}
+		newArray.join('');
 	},
 		boxVisible = function (elem, box){
 		for (var i = 0; i < elem.children.length; i++) {
