@@ -1,14 +1,17 @@
 
 function unitPage() {
 	var slideset = document.getElementById('gallery').children,
+		parent = document.getElementById('gallery'),
 		button = document.getElementById('btn'),
 		delay = 1000,
+		rotateActive = 'rotate-enable',
+		rotateNotActive = 'rotate-disable',
 		currentIndex;
 
+	
 	addClassFirstItem(slideset, 'active');
-	btnClick(button, move(button, delay, 'btn-active'));
-	console.dir(button);
-	console.log(button.innerText);
+	btnClick(button, move(button, delay, parent, rotateActive, rotateNotActive));
+
 }
 
 function addClassFirstItem (element, cname) {
@@ -49,45 +52,65 @@ function addClass(element, cname) {
 }
 
 function removeClass(elem, cname) {
-	if(hasClass(elem, cname) === true){
-		elem.className = elem.className.replace(cname, '');
+	if(hasClass(elem, cname) == true){
+		elem.className = elem.className.replace(' ' + cname, '');
+		console.log('1q1q1');
+	} else if(hasClass(elem, cname) === false){
+		elem.className = elem.className.replace(''+ cname, '');
+		console.log('2q2q2');
 	}
 }
 
-function move (button, delay, btnClass) {
-	return function () {
-		btnTextChange(button, 'STOP')
-		var timer = setTimeout(
-			function run(){
-				console.log('hello');
-				timer = setTimeout(run, delay);
-				if(btnClick(button, move())){
-					return clearTimeout(timer);
+function move (element, delay, parent, rotateActive, rotateNotActive) {
+	var timer;
+	var sdsd = function(){
+			console.log('hello');
+			setTimeout(sdsd, delay);
 
-				}
-			}
-			, delay);
-		//addClass(button, btnClass);
-		//		});
-		//var timerOur = clearTimeout(timer);
-
-		//;
-		//console.log('155');
-			// removeClass(button, btnClass);
-			// clearTimeout(timer);
+		};
+		
+		searchClass(parent, rotateActive);
+		searchClass(parent, rotateNotActive);
+		if(searchClass(parent, rotateActive) !== true && searchClass(parent, rotateNotActive)  !== true){
+	//		addClass(parent , rotateNotActive);
 		}
+		
+		//btnTextChange(element, 'STOP');
+	return function (){
+			//hasClass(parent , rotateNotActive);
+			//hasClass(parent , rotateActive);
+			console.log(hasClass(parent , rotateNotActive));
+		//	addClass(parent , rotateNotActive);
+		if(hasClass(parent , rotateActive) === true){
+			console.log('2222');
+			addClass(parent , rotateNotActive);
+			removeClass(parent , rotateActive);
+			btnTextChange(element, 'PLAY');
+			timer = clearTimeout(sdsd);
+		}
+		else if(hasClass(parent , rotateNotActive ) === true){
+			addClass(parent , rotateActive);
+			console.log('delelteee');
+			removeClass(parent , rotateNotActive);
+			console.log('delelteee2');
+			btnTextChange(element, 'STOP');
+			timer = setTimeout(sdsd, delay);
+			console.log('111');
+		}
+		return timer;
 	}
+}
 
-	//btnClick(element, clearTimeout(timer));
 
 
 function btnTextChange (element, btnText){
-	element.innerText = btnText;
+	element.innerHTML = btnText;
 }
 
 function btnClick(element, func){
 	if (element.addEventListener) element.addEventListener('click', func, false);
 	else if (element.attachEvent) element.attachEvent('onclick', func);
+
 }
 
 if(window.addEventListener) window.addEventListener('load', unitPage, false);
