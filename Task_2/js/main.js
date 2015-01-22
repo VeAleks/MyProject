@@ -3,20 +3,21 @@ function unitPage() {
 	var listItem = document.getElementById('list-holder').children,
 		images;
 
-	for (var i = listItem.length - 1; i >= 0; i--) {
-		var widthParent = listItem[i].clientWidth,
-			heightParent = listItem[i].clientHeight;
+	for(var i = listItem.length - 1; i >= 0; i--) {
+		var item = listItem[i],
+			widthParent = item.clientWidth,
+			heightParent = item.clientHeight;
 
-		images = listItem[i].children;
+		images = item.children;
 		for(var j = 0; j <= images.length - 1; j++){
-			var width = images[j].clientWidth,
-				height = images[j].clientHeight;
+			var images = images[j];
+			 width = images.clientWidth,
+				height = images.clientHeight;
 
-			autoAlign(images[j], widthParent, heightParent, height, width);
+			autoAlign(images, widthParent, heightParent, height, width);
 		}
 	}
 }
-
 
 function autoAlign(element , widthParent, heightParent, height, width ){
 	var a = heightParent - height,

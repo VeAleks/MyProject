@@ -52,11 +52,12 @@ function addClass(element, cname) {
 }
 
 function removeClass(elem, cname) {
-	if(hasClass(elem, cname) == true){
-		elem.className = elem.className.replace(' ' + cname, '');
-		console.log('1q1q1');
-	} else if(hasClass(elem, cname) === false){
-		elem.className = elem.className.replace(''+ cname, '');
+	console.log(hasClass(elem, cname));
+	if (elem.className == ''){
+		elem.className = elem.className.replace(cname, '');
+		
+	} else {
+		elem.className = elem.className.replace( ' '+ cname, '');
 		console.log('2q2q2');
 	}
 }
@@ -66,36 +67,36 @@ function move (element, delay, parent, rotateActive, rotateNotActive) {
 	var sdsd = function(){
 			console.log('hello');
 			setTimeout(sdsd, delay);
-
+			clearTimeout(timer);
 		};
 		
-		searchClass(parent, rotateActive);
-		searchClass(parent, rotateNotActive);
+		hasClass(parent , rotateActive )
+		hasClass(parent , rotateNotActive )
 		if(searchClass(parent, rotateActive) !== true && searchClass(parent, rotateNotActive)  !== true){
-	//		addClass(parent , rotateNotActive);
-		}
-		
-		//btnTextChange(element, 'STOP');
-	return function (){
-			//hasClass(parent , rotateNotActive);
-			//hasClass(parent , rotateActive);
-			console.log(hasClass(parent , rotateNotActive));
-		//	addClass(parent , rotateNotActive);
-		if(hasClass(parent , rotateActive) === true){
-			console.log('2222');
 			addClass(parent , rotateNotActive);
-			removeClass(parent , rotateActive);
-			btnTextChange(element, 'PLAY');
-			timer = clearTimeout(sdsd);
 		}
-		else if(hasClass(parent , rotateNotActive ) === true){
-			addClass(parent , rotateActive);
-			console.log('delelteee');
+	return function (){
+		
+		if(hasClass(parent , rotateNotActive ) === true){
 			removeClass(parent , rotateNotActive);
-			console.log('delelteee2');
+			parent.className = parent.className.replace(rotateNotActive, '');
+			console.log(parent.className);
+			addClass(parent , rotateActive);
+			//parent.className = parent.className.replace(rotateNotActive, '');
+			
 			btnTextChange(element, 'STOP');
 			timer = setTimeout(sdsd, delay);
-			console.log('111');
+			console.log('rotate on');
+		}
+		else if(hasClass(parent , rotateActive) === true){
+			if (parent.className === '') parent.className = parent.className.replace(' ' + rotateActive, '');
+			else parent.className = parent.className.replace(' ' + rotateActive, '');
+		//	parent.className = parent.className.replace(rotateActive, '');
+
+			addClass(parent , rotateNotActive);
+			btnTextChange(element, 'PLAY');
+			timer = clearTimeout(sdsd);
+			console.log('rotate off');
 		}
 		return timer;
 	}
