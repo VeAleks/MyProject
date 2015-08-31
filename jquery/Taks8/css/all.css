@@ -1,0 +1,376 @@
+body{
+	font:13px Arial, Helvetica, sans-serif;
+	background:#fff;
+	color:#000;
+	margin:10px;
+}
+img{border:none;}
+a{
+	text-decoration:underline;
+	color:#00f;
+}
+a:hover{text-decoration:none;}
+input, textarea, select{
+	font:100% Arial,sans-serif;
+	vertical-align:middle;
+}
+form,fieldset {
+	margin:0;
+	padding:0;
+	border:none;
+}
+
+/* main blocks styles */
+.holder{
+	overflow:hidden;
+	padding:20px 0;
+	width:100%;
+}
+
+/* task information block styles */
+.task-info {
+	border-bottom: 1px solid #999;
+	position: relative;
+	background:#bfb;
+	padding: 20px;
+	margin: 0 0 -1px;
+}
+.task-info h1 {
+	font-size: 26px;
+	margin: 0 0 10px;
+}
+.task-info ul {
+	list-style: none;
+	padding: 0 0 0 15px;
+	margin: 0 0 10px;
+}
+.task-info p {
+	margin: 0;
+	padding: 0 0 10px;
+}
+
+/* task 1 styles */
+.task1 .box{
+	width:300px;
+	border:1px solid red;
+	padding:10px;
+	margin:20px auto 0;
+}
+.task1 .box a{
+	cursor:pointer;
+	color:green;
+}
+.task1 .info{ display:none;}
+.task1 .opened .info{ display:block;}
+
+/* task 3 styles */
+.task3 ul.list{
+	width:500px;
+	border:1px solid #000;
+	list-style: none;
+	padding:0 10px 10px;
+	margin:0 auto;
+}
+.task3 .list li{
+	padding:10px;
+	width:480px;
+	border:1px solid #000;
+	margin-top:10px;
+}
+.task3 .list .rholder{
+	width:100%;
+	overflow:hidden;
+	clear:both;
+}
+
+/* task 4 styles */
+.task4 .box{
+	width:400px;
+	border:1px solid red;
+	padding:10px;
+	margin:0 auto;
+}
+.task4 a{
+	color:green;
+	cursor:pointer;
+	text-decoration:underline;
+}
+#tooltip{
+	position:absolute;
+	top:0;
+	left:0;
+	background:#fee;
+	border:1px solid #44f;
+	float:left;
+	white-space:nowrap;
+	padding:2px;
+	height:15px;
+	line-height:15px;
+}
+
+/* task 5 styles */
+.task5 .box-holder{
+	position:relative;
+	height:300px;
+	border:1px solid #000;
+	margin:15px 10px 0;
+}
+.task5 .box-holder .box{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-6666px;
+	overflow:hidden;
+	background: url(../images/tank-up.gif);
+}
+
+/* task 6 styles */
+.task6 .open-close {
+	border: 1px solid #aaa;
+	background: #fefefe;
+	padding: 5px;
+	width: 400px;
+	margin: 0 auto 10px;
+}
+.task6 .active a.opener {
+	color: #f00 !important;
+}
+.task6 .open-close .opener {
+	text-decoration: none;
+	background: #eee;
+	color: #00f;
+	padding: 5px;
+	display: block;
+}
+.task6 .open-close .slide { 
+	position: relative;
+	overflow: hidden;
+	width: 100%; /* set width in px to avoid jumping! */
+}
+.task6 .open-close .slide p { 
+	margin: 0;
+}
+.task6 .accordion,
+.task6 .accordion ul {
+	list-style: none;
+	width: 200px;
+	padding: 0;
+	margin: 0 auto;
+}
+.task6 .accordion ul {
+	padding: 0 0 0 30px;
+}
+.task6 a {
+	cursor: pointer;
+}
+.task6 .active > a {
+	color: #f00;
+}
+
+/* task 7 styles */
+.task9 .nav:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.task9 .nav{
+	margin:0 auto;
+	padding: 150px 0;
+	width:500px;
+	list-style:none;
+}
+.task9 .nav li{
+	float:left;
+	width:100px;
+	position:relative;
+	background:#ccc;
+}
+.task9 .nav a{
+	cursor:pointer;
+	display:block;
+	color: #777;
+	text-decoration: none;
+	padding:5px 0 5px 10px;
+}
+.task9 .nav ul{
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:25px;
+	left:0;
+	list-style:none;
+	width:100px;
+	background:#ccc;
+	border-top:1px solid #000;
+	z-index:2;
+}
+.task9 .nav ul ul ul,
+.task9 .nav ul ul ul ul,
+.task9 .nav ul ul{
+	left:100px;
+	top:-1px;
+}
+.task9 .nav ul li{
+	border-bottom:1px solid #000;
+	float:none;
+	vertical-align:top;
+}
+.task9 .drop{
+	overflow:hidden;
+	position:absolute;
+	top:25px;
+	left:0;
+}
+.task9 .nav .drop ul{position:static;}
+
+/* task 7 styles */
+.task7 .form-holder {
+	padding: 50px;
+}
+.task7 .form-holder .row {
+	overflow: hidden;
+	padding: 5px 0;
+	width: 100%;
+}
+.task7 .hidden {
+	position: absolute;
+	left: -9999px;
+}
+.task7 .checkbox-area {
+	border: 1px solid #000;
+	float: left;
+	margin: 0 5px 0 0;
+	background: #faa;
+	display: block;
+	width: 18px;
+	height: 18px;
+}
+.task7 .checkbox-area-checked {
+	background: #afa !important;
+}
+
+/* task 8 styles */
+.task8 .tabs-holder {
+	border: 1px solid #999;
+	background: #f7f7f7;
+	margin: 0 7% 50px;
+	padding: 50px;
+}
+.task8 .tabset {
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.task8 .tabset li {
+	float: left;
+	padding: 0 8px 0 0;
+}
+.task8 .tabset a {
+	border: 1px solid #777;
+	text-decoration: none;
+	padding: 3px 5px;
+	background: #fff;
+	float: left;
+	color: #000;
+}
+.task8 .tabset a:hover,
+.task8 .tabset a.active {
+	color: #fff;
+	background: #777;
+}
+
+/* task 10 styles */
+.task10 .gallery-holder {
+	border: 1px solid #888;
+	margin: 50px auto;
+	padding: 20px;
+	width: 500px;
+}
+.task10 .gallery-holder h2 {
+	margin: 0 0 5px;
+}
+.task10 .gallery-holder .gholder {
+	overflow: hidden;
+	width: 100%;
+}
+.task10 .gallery-holder .gmask {
+	border: 1px solid #888;
+	position: relative;
+	overflow: hidden;
+	width: 414px;
+	height: 100px;
+	float: left;
+}
+.task10 .gallery-holder .gmask  ul {
+	list-style: none;
+	width: 99999px;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.task10 .gallery-holder .gmask  ul li {
+	float: left;
+	font-size: 60px;
+	line-height: 100px;
+	text-align: center;
+	width: 414px;
+	height: 100px;
+}
+.task10 .gallery-holder .gmask  .c1 {background: #fee;}
+.task10 .gallery-holder .gmask  .c2 {background: #efe;}
+.task10 .gallery-holder .gmask  .c3 {background: #eef;}
+.task10 .gallery-holder .gmask  .c4 {background: #ffe;}
+.task10 .gallery-holder .gmask  .c5 {background: #fef;}
+
+.task10 .gallery-holder a.btn-prev,
+.task10 .gallery-holder a.btn-next {
+	border: 1px solid #888;
+	font-weight: bold;
+	background: #fff;
+	text-align: center;
+	color: #000;
+	font-size: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	float: left;
+	width: 30px;
+	margin: 35px 10px 0 0;
+	height: 30px;
+}
+.task10 .gallery-holder a.btn-next {
+	margin: 35px 0 0 10px;
+	float: right;
+}
+.task10 .gallery-holder .pagination ul{
+	font-weight: bold;
+	list-style: none;
+	text-align: center;
+	padding: 5px 0;
+	margin: 0;
+}
+.task10 .gallery-holder .pagination ul li {
+	padding: 0 5px;
+	display: inline;
+}
+.task10 .gallery-holder .pagination a {
+	text-decoration: none;
+	color: #00f;
+}
+.task10 .gallery-holder .pagination .active a {
+	color: #f00;
+}
+.task10 .slideshow .gmask  ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.task10 .slideshow .gmask  ul li.active {
+	z-index: 1;
+}
+.task10 a {
+	cursor: pointer;
+}

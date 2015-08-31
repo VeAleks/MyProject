@@ -1,0 +1,82 @@
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.icon-arrow {
+	width: 1.4931640625em;
+}
+
+.icon-arrow-down {
+	width: 1.921875em;
+}
+
+.icon-arrow-up {
+	width: 1.921875em;
+}
+
+.icon-comment {
+	width: 1.1806640625em;
+}
+
+.icon-clip {
+	width: 1.083984375em;
+}
+
+.icon-camera {
+	width: 1.208984375em;
+}
+
+.icon-chats {
+	width: 1.2861328125em;
+}
+
+.icon-folder {
+	width: 1.1240234375em;
+}
+
+.icon-lightning {
+	width: 0.560546875em;
+}
+
+.icon-logo {
+	width: 1.5771484375em;
+}
+
+.icon-logo-text {
+	width: 5.9091796875em;
+}
+
+.icon-man {
+	width: 1.013671875em;
+}
+
+.icon-monitor {
+	width: 1.22265625em;
+}
+
+.icon-not-usd {
+	width: 1.013671875em;
+}
+
+.icon-pulse {
+	width: 1.8642578125em;
+}
+
+.icon-refresh {
+	width: 1.013671875em;
+}
+
+.icon-sign-in {
+	width: 0.8984375em;
+}
+
+.icon-sign-out {
+	width: 0.8984375em;
+}
+
+.icon-users {
+	width: 1.056640625em;
+}
