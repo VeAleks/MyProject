@@ -1,0 +1,10 @@
+<a (click)="toggleState($event)" class="menu-trigger">
+	<span class="top" [@openerStateTop]="navbarVisible"></span>
+	<span class="center" [@openerStateCenter]="navbarVisible"></span>
+	<span class="bottom" [@openerStateBottom]="navbarVisible"></span>
+</a>
+<nav [@navbarState]="navbarVisible" (@navbarState.start)="animationStart($event)"(@navbarState.done)="animationDone($event)">
+	<ul [@itemsAmation]="itemsVisible">
+		<li *ngFor="let menuItem of menuItems"><a href="#">{{menuItem}}</a></li>
+	</ul>
+</nav>

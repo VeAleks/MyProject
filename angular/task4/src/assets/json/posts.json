@@ -1,0 +1,92 @@
+[
+	{
+		"image": "../assets/images/slide-img.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 3 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 1312,
+		"mostCommented": 15,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img2.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 5 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 132,
+		"mostCommented": 25,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img3.png",
+		"imageAlt": "image description",
+		"date": "Sun Jun 4 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 32,
+		"mostCommented": 45,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "",
+		"imageAlt": "image description",
+		"date": "Sun Jul 6 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 232,
+		"mostCommented": 65,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou. The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou. Anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all"
+	},
+	{
+		"image": "../assets/images/slide-img2.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 10 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 1324,
+		"mostCommented": 235,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 14 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 1332,
+		"mostCommented": 35,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img3.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 16 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 5152,
+		"mostCommented": 76,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 18 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 432,
+		"mostCommented": 544,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img2.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 22 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 532,
+		"mostCommented": 534,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	},
+	{
+		"image": "../assets/images/slide-img.png",
+		"imageAlt": "image description",
+		"date": "Sun Jul 23 2018 22:48:59 GMT+0200",
+		"title": "It is situated in the bay",
+		"likes": 632,
+		"mostCommented": 234,
+		"text": "The Carnatic anchored at the quay near the custom-house, in the midst of a crowd of ships bearing the flags of all nations. Passepartou"
+	}
+]

@@ -1,0 +1,43 @@
+<section>
+	<div class="container">
+		<div class="heading">
+			<h2>{{headingData.title}}</h2>
+			<p *ngFor="let text of headingData.text">{{text}}</p>
+		</div>
+		<div class="carousel">
+			<div class="slideset" [ngStyle]="slidesetStyles">
+				<div class="slide current" slidesetHeight [ngStyle]="{'position': currentPosition}" [@slideShow]="animateShow" (@slideShow.start)="animateShowStart($event)"(@slideShow.done)="animateShowDone($event)">
+					<article>
+						<div class="img-holder">
+							<img src="{{showObject.image}}" alt="{{showObject.imageAlt}}">
+						</div>
+						<div class="info">
+							<h1 class="article-head"><a href="{{showObject.linkTo}}">{{showObject.title}}</a></h1>
+							<time class="date">{{showObject.published}}</time>
+							<p>{{showObject.text}}</p>
+							<a href="{{showObject.linkTo}}" class="btn">READ MORE</a>
+						</div>
+					</article>
+				</div>
+				<div class="slide prev" slidesetHeight [ngStyle]="{'position': prevPosition}"  [@slideHide]="animateHide">
+					<article>
+						<div class="img-holder">
+							<img src="{{hideObject.image}}" alt="{{hideObject.imageAlt}}">
+						</div>
+						<div class="info">
+							<h1 class="article-head"><a href="{{hideObject.linkTo}}">{{hideObject.title}}</a></h1>
+							<time class="date">{{hideObject.published}}</time>
+							<p>{{hideObject.text}}</p>
+							<a href="{{hideObject.linkTo}}" class="btn">READ MORE</a>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="carousel-btn btn-next" (click)="next()"><span class="icon-cheveron-right"></span></div>
+			<div class="carousel-btn btn-prev" (click)="prev()"><span class="icon-cheveron-left"></span></div>
+			<ul class="switcher">
+				<li *ngFor="let slide of carouselData; let i=index;" [ngClass]="{'active':(i===index? true: false)}" (click)="clickToSlide(i)"></li>
+			</ul>
+		</div>
+	</div>
+</section>

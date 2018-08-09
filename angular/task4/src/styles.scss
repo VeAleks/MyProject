@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import 'assets/vendors/include-media';
+@import 'assets/vendors/normalize';
+@import 'assets/vendors/icomoon';
+
+@import 'assets/base/variables';
+@import 'assets/base/functions';
+@import 'assets/base/mixins';
+@import 'assets/base/helpers';
+@import 'assets/base/reset';
+@import 'assets/base/typography';
+@import 'assets/base/forms';
+
+
+app-root{
+	overflow: hidden;
+	display: block;
+}
+main{
+  padding: 60px 0;
+  @include media(">=desktop") {
+    padding: 40px 0;
+  }
+}
+.container{
+  padding: 0 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.btn{
+  background: transparent;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2e343e;
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 2px solid #cccdd0;
+}

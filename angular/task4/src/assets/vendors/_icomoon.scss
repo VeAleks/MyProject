@@ -1,0 +1,78 @@
+@import "icomoon-variables";
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$icomoon-font-path}/icomoon.eot?i1hvlz');
+  src:  url('#{$icomoon-font-path}/icomoon.eot?i1hvlz#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/icomoon.ttf?i1hvlz') format('truetype'),
+    url('#{$icomoon-font-path}/icomoon.woff?i1hvlz') format('woff'),
+    url('#{$icomoon-font-path}/icomoon.svg?i1hvlz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], %icomoon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-cheveron-left {
+  &:before {
+    content: unicode($icon-cheveron-left); 
+  }
+}
+.icon-cheveron-up {
+  &:before {
+    content: unicode($icon-cheveron-up); 
+  }
+}
+.icon-cheveron-right {
+  &:before {
+    content: unicode($icon-cheveron-right); 
+  }
+}
+.icon-mail {
+  &:before {
+    content: unicode($icon-mail); 
+  }
+}
+.icon-calendar {
+  &:before {
+    content: unicode($icon-calendar); 
+  }
+}
+.icon-chat {
+  &:before {
+    content: unicode($icon-chat); 
+  }
+}
+.icon-heart {
+  &:before {
+    content: unicode($icon-heart); 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: unicode($icon-twitter); 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: unicode($icon-facebook); 
+  }
+}
+
