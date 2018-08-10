@@ -1,0 +1,127 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+@import '../../assets/vendors/include-media';
+@import '../../assets/base/variables';
+@import '../../assets/base/helpers';
+
+:host {
+  background: #2e343e;
+  padding: 20px 0;
+  text-align: center;
+  display: block;
+  color: rgba($white, 0.2);
+  font-size: 14px;
+  line-height: 1.43;
+  position: relative;
+  @include media("screen", ">=desktop") {
+    padding: 60px 0 38px;
+    text-align: left;
+  }
+}
+.container{
+  @include media("screen", ">=desktop") {
+    display: flex;
+    align-items: start;
+    position: relative;
+    justify-content: space-between;
+  }
+}
+.logo-bottom{
+  display: block;
+  margin: 0 auto 20px;
+  width: 132px;
+  flex-shrink: 0;
+  @include media("screen", ">=desktop") {
+    margin: 0 10% 0 0;
+  }
+}
+.area{
+  @include media("screen", ">=desktop") {
+    flex-grow: 1;
+    display: flex;
+  }
+}
+h3{
+  font-size: 12px;
+  line-height: 1.5;
+  color: #b0b1b4;
+  text-transform: uppercase;
+  @include media("screen", ">=desktop") {
+    margin: 0 0 38px;
+  }
+}
+h4{
+  font-size: 16px;
+  line-height: 1.33;
+  color: $white;
+  @include media("screen", ">=desktop") {
+    font-size: 18px;
+    margin: 0 0 6px;
+  }
+  a{
+    color: $white;
+    &:hover{
+      color: rgba($white, 0.2);
+    }
+  }
+}
+a{
+  color: rgba($white, 0.2);
+  transition:color 0.3s linear;
+  &:hover{
+    color: $white;
+  }
+}
+address{
+  font-style: normal;
+  a{
+    display: inline-block;
+    &:hover{
+      color: $white;
+    }
+  }
+  p{
+    margin: 0 0 23px;
+  }
+}
+.col{
+  @include media("screen", ">=desktop") {
+    width: 25%;
+    padding: 0 10px;
+  }
+  &.post{
+    @include media("screen", ">=desktop") {
+      width: 50%;
+    }
+  }
+}
+ul{
+  @extend %listreset;
+}
+.anchor{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $green;
+  padding: 6px 13px 9px;
+  border-radius: 0 0 3px 3px;
+  color: $white;
+  transition:background 0.3s linear;
+  cursor: pointer;
+  z-index: 5;
+  @include media("screen", ">=desktop") {
+    bottom: -38px;
+    left: 100%;
+    right: auto;
+    top: auto;
+    border-radius: 3px 3px 0 0;
+  }
+  &:hover{
+    background: darken($green, 10%);
+  }
+}
