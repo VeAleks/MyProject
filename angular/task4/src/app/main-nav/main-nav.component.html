@@ -1,7 +1,7 @@
 <a (click)="toggleState($event)" class="menu-trigger">
-	<span class="top" [@openerStateTop]="navbarVisible"></span>
-	<span class="center" [@openerStateCenter]="navbarVisible"></span>
-	<span class="bottom" [@openerStateBottom]="navbarVisible"></span>
+	<span class="top" [@openerStateTop]="iconClose"></span>
+	<span class="center" [@openerStateCenter]="iconClose"></span>
+	<span class="bottom" [@openerStateBottom]="iconClose"></span>
 </a>
 <nav [@navbarState]="navbarVisible" (@navbarState.start)="animationStart($event)"(@navbarState.done)="animationDone($event)">
 	<ul [@itemsAmation]="itemsVisible">

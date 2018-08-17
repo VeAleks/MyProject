@@ -63,7 +63,8 @@ export class MainNavComponent implements OnInit {
 		'Contact'
 	];
 
-	navbarVisible = 'inactive';
+	navbarVisible:string = 'inactive';
+	iconClose:string = 'inactive';
 	flagHidden = true;
 	itemsVisible = 'inactive';
 	constructor() { }
@@ -72,9 +73,9 @@ export class MainNavComponent implements OnInit {
 	ngOnInit() {
 	}
 	toggleState(e) {
-		console.log(1)
 		this.flagHidden = !this.flagHidden;
 		this.navbarVisible = this.flagHidden ? 'inactive': 'active';
+		this.iconClose = this.flagHidden ? 'inactive': 'active';
 	}
 	animationDone(e){
 		if(e.toState === 'active' ) {
@@ -88,6 +89,7 @@ export class MainNavComponent implements OnInit {
 	}
 	hideMenu(){
 		this.navbarVisible = 'inactive';
+		this.iconClose = 'inactive';
 		this.flagHidden = !this.flagHidden;
 	}
 }
