@@ -1,8 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
+<app-header [clickOn]="event" (getOffsetTop)="slideTo($event)"></app-header>
 <main id="main">
-  <blog-intro></blog-intro>
-  <filter-posts></filter-posts>
+  <router-outlet></router-outlet>
 </main>
-<footer-page></footer-page>
+<footer-page (fakeClick)="clickFromAnchor($event)"></footer-page>
 

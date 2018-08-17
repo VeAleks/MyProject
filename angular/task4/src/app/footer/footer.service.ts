@@ -40,5 +40,17 @@ export class FooterService {
       ]
     }
 	]
+  copyright = '© Copyright 2013 Centy';
+  tools = [
+    'Home',
+    'Work',
+    'About',
+    'Contact us'
+  ]
+  socialIcons = [
+    'icon-twitter',
+    'icon-facebook',
+    'icon-mail'
+  ]
   constructor() { }
 }

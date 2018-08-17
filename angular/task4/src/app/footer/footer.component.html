@@ -1,22 +1,41 @@
-<div class="container" #target>
-	<a href="#" class="logo-bottom"><img src="{{logoUrl}}" alt="Centy web" width="132" height="23"></a>
-	<div class="area">
-		<div class="col" *ngFor="let box of data" [ngClass]="{'post': (box.post)? true: false, 'address': (box.address)? true: false, 'social': (box.social)? true: false }">
-			<h3>{{box.title}}</h3>
-			<section *ngIf="box.post">
-				<h4><a href="#">{{box.post.title}}</a></h4>
-				<p class="post-text">{{box.post.text}}</p>
-			</section>
-			<address *ngIf="box.address">
-        <p>{{box.address.addressInfo}}</p>
-        <p><a href="callto:{{transformTel(box.address.contactInfo.tel)}}" class="tel">{{box.address.contactInfo.tel}}</a> <a href="mailto:{{box.address.contactInfo.email}}" class="email">{{box.address.contactInfo.email}}</a></p>
-      </address>
-      <ul *ngIf="box.social">
-				<li *ngFor="let social of box.social">
-					<a href="{{social.linkUrl}}">{{social.name}}</a>
+<div class="footer-holder">
+	<div class="container" #target>
+		<a href="#" class="logo-bottom"><img src="{{logoUrl}}" alt="Centy web" width="132" height="23"></a>
+		<div class="area">
+			<div class="col" *ngFor="let box of data" [ngClass]="{'col-post': (box.post)? true: false, 'col-address': (box.address)? true: false, 'col-social': (box.social)? true: false }">
+				<h3>{{box.title}}</h3>
+				<section *ngIf="box.post">
+					<h4><a href="#">{{box.post.title}}</a></h4>
+					<p class="post-text">{{box.post.text}}</p>
+				</section>
+				<address *ngIf="box.address">
+	        <p>{{box.address.addressInfo}}</p>
+	        <p><a href="tel:{{transformTel(box.address.contactInfo.tel)}}" class="tel">{{box.address.contactInfo.tel}}</a> <a href="mailto:{{box.address.contactInfo.email}}" class="email">{{box.address.contactInfo.email}}</a></p>
+	      </address>
+	      <ul *ngIf="box.social">
+					<li *ngFor="let social of box.social">
+						<a href="{{social.linkUrl}}">{{social.name}}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<span class="anchor icon-cheveron-up" (click)="scrollTo($event)"></span>
+	</div>
+</div>
+<div class="footer-row">
+	<div class="container">
+		<p class="copyright">{{copyright}}</p>
+		<nav>
+			<ul class="tools">
+				<li *ngFor="let item of tools">
+					<a href="#">{{item}}</a>
 				</li>
 			</ul>
-		</div>
+			<ul class="social-icons">
+				<li *ngFor="let iconClass of socialIcons">
+					<a href="" class="{{iconClass}}"></a>
+				</li>
+			</ul>
+		</nav>
 	</div>
-	<span class="anchor icon-cheveron-up" (click)="scrollTo(target)"></span>
 </div>

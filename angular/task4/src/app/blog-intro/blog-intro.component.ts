@@ -46,31 +46,28 @@ export class BlogIntroComponent implements OnInit {
 	}
 	carouselData = [
 		{
-			image: '../assets/images/slide-img.png',
+			image: 'assets/images/slide-img.png',
 			imageAlt: 'image description',
 			title: 'Carrying travellers',
 			published: '2013, April 30',
-			text: 'Passepartout went timidly ashore on this so curious territory of the Sons of the Sun. He had nothing better to do than, taking chance for his guide, to wander aimlessly through the streets of Yokohama. He found himself at first in a thoroughly European',
-			linkTo: '#'
+			text: 'Passepartout went timidly ashore on this so curious territory of the Sons of the Sun. He had nothing better to do than, taking chance for his guide, to wander aimlessly through the streets of Yokohama. He found himself at first in a thoroughly European'
 		},
 		{
-			image: '../assets/images/slide-img2.png',
+			image: 'assets/images/slide-img2.png',
 			imageAlt: 'image description',
 			title: 'Carrying travellers',
 			published: '2013, April 10',
-			text: 'Passepartout went timidly ashore on this so curious territory',
-			linkTo: '#'
+			text: 'Passepartout went timidly ashore on this so curious territory'
 		},
 		{
-			image: '../assets/images/slide-img3.png',
+			image: 'assets/images/slide-img3.png',
 			imageAlt: 'image description',
 			title: 'Carrying travellers',
 			published: '2013, April 30',
-			text: 'Passepartout went timidly ashore on this so curious territory of the Sons of the Sun. He had nothing better to do than, taking chance for his guide, to wander aimlessly through the streets of Yokohama. He found himself at first in a thoroughly European.<br>Passepartout went timidly ashore on this so curious territory of the Sons of the Sun. He had nothing better to do than, taking chance for his guide, to wander aimlessly through the streets of Yokohama. He found himself at first in a thoroughly European.', 
-			linkTo: '#'
+			text: 'Passepartout went timidly ashore on this so curious territory of the Sons of the Sun. He had nothing better to do than, taking chance for his guide, to wander aimlessly through the streets of Yokohama. He found himself at first in a thoroughly European.<br>Passepartout went timidly ashore on this so curious territory of the Sons of the Sun. He had nothing better to do than, taking chance for his guide, to wander aimlessly through the streets of Yokohama. He found himself at first in a thoroughly European.' 
 		}
 	]
-	showObject: object = {};
+	showObject;
 	index = 0;
 	isEvent = false;
 	animateShow = 'center';
@@ -78,7 +75,7 @@ export class BlogIntroComponent implements OnInit {
 	animateHide: string;
 	prevPosition: string;
 	currentPosition: string;
-	hideObject: object;
+	hideObject;
 	switchers = this.carouselData.length;
 	slideCurrent;
 	slidesetStyles = {
@@ -102,6 +99,7 @@ export class BlogIntroComponent implements OnInit {
 		
 	}
 	refreshStyles() {
+		if(!this.showObject) return;
 		this.animateHide = 'center';
 		this.hideObject = this.showObject;
 		this.isEvent = false;

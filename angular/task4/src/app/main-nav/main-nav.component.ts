@@ -72,6 +72,7 @@ export class MainNavComponent implements OnInit {
 	ngOnInit() {
 	}
 	toggleState(e) {
+		console.log(1)
 		this.flagHidden = !this.flagHidden;
 		this.navbarVisible = this.flagHidden ? 'inactive': 'active';
 	}
@@ -84,6 +85,10 @@ export class MainNavComponent implements OnInit {
 		if(e.toState === 'inactive' ) {
 			this.itemsVisible = 'inactive';
 		}
+	}
+	hideMenu(){
+		this.navbarVisible = 'inactive';
+		this.flagHidden = !this.flagHidden;
 	}
 }
 

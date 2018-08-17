@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef,  ViewChild, EventEmitter, Input, Output, OnChanges } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -6,15 +6,26 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 	templateUrl: './header.component.html',
 	styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnChanges {
 	logoDesktop = 'assets/images/logo.png';
 	logoMobile = 'assets/images/logo-m.png';
 	logoAlt = 'assets/images/logo.png';
-	
 	flagHidden = true;
-	constructor() {}
+	
+	@ViewChild('header') header: ElementRef;
+	@Input() clickOn;
+	@Output() getOffsetTop =  new EventEmitter<boolean>();
 
-	ngOnInit() {
+	constructor() {}
+	ngOnInit() {}
+	ngOnChanges() {
+		if(this.clickOn){
+			this.sendOffset(this.header.nativeElement.offsetTop)
+		}
+	}
+
+	sendOffset(top){
+		this.getOffsetTop.emit(top)
 	}
 
 }

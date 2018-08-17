@@ -9,19 +9,66 @@ $breakpoints: (
 @import '../../assets/base/variables';
 @import '../../assets/base/helpers';
 
-:host {
+.footer-holder{
   background: #2e343e;
-  padding: 20px 0;
+  padding: 30px 0 2px;
   text-align: center;
   display: block;
   color: rgba($white, 0.2);
   font-size: 14px;
   line-height: 1.43;
   position: relative;
-  @include media("screen", ">=desktop") {
-    padding: 60px 0 38px;
+  @include media("screen", ">=tablet") {
     text-align: left;
   }
+  @include media("screen", ">=desktop") {
+    padding: 60px 0 38px;
+  }
+}
+.footer-row{
+  background: #181a1e;
+  padding: 22px 0 2px;
+  text-align: center;
+  @include media("screen", ">=tablet") {
+    padding: 20px 0;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 20px;
+    @include media("screen", ">=tablet") {
+      margin: 0;
+    }
+    li{
+      @include media("screen", ">=tablet") {
+        margin-left: 5px;
+      }
+    }
+  }
+  nav{
+    @include media("screen", ">=tablet") {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  .container{
+    @include media("screen", ">=tablet") {
+      justify-content: space-between;
+      display: flex;
+      align-items: start;
+      
+    }
+  }
+  p{
+    margin: 0 0 20px;
+    @include media("screen", ">=tablet") {
+      margin: 0;
+    }
+  }
+
 }
 .container{
   @include media("screen", ">=desktop") {
@@ -41,9 +88,16 @@ $breakpoints: (
   }
 }
 .area{
-  @include media("screen", ">=desktop") {
+  @include media("screen", ">=tablet") {
     flex-grow: 1;
     display: flex;
+    justify-content: space-between;
+  }
+}
+section{
+  @include media("<tablet") {
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 h3{
@@ -86,17 +140,34 @@ address{
     }
   }
   p{
-    margin: 0 0 23px;
+    margin: 0;
+    @include media("screen", ">=desktop") {
+      margin: 0 0 23px;
+    }
   }
 }
 .col{
+  margin: 0 0 28px;
   @include media("screen", ">=desktop") {
-    width: 25%;
+    width: 30%;
     padding: 0 10px;
   }
-  &.post{
+  &.col-post{
+    @include media("screen", ">=tablet") {
+      width: 40%;
+    }
+  }
+  &.col-address{
+    @include media("screen", ">=tablet") {
+      width: 25%;
+    }
     @include media("screen", ">=desktop") {
-      width: 50%;
+      width: 30%;
+    }
+  }
+  &.col-social{
+    @include media("screen", ">=tablet") {
+      width: 20%;
     }
   }
 }
@@ -123,5 +194,52 @@ ul{
   }
   &:hover{
     background: darken($green, 10%);
+  }
+}
+.copyright{
+  font-size: 12px;
+  color: rgba($white, 0.8);
+}
+
+.social-icons{
+  @include media("screen", ">=tablet") {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  li{
+    margin: 0 5px;
+    @include media("screen", ">=tablet") {
+      margin: 0 0 0 8px;
+    }
+  }
+  a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #0c0d0f;
+    border-radius: 50%;
+    position: relative;
+    @include media("screen", ">=tablet") {
+      width: 20px;
+      height: 20px;
+    }
+    &:hover{
+      color: $white;
+    }
+    &:before{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}
+.tools{
+  font-size: 16px;
+  @include media("screen", ">=tablet") {
+    font-size: 12px;
+  }
+  li{
+    margin: 0 5px;
   }
 }

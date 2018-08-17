@@ -90,6 +90,7 @@ ul{
 			transform: translateY(0) !important;
 			opacity: 1 !important;
 		}
+		&.active,
 		&:hover{
 			color: $black;
 			border-bottom-color: $green;

@@ -1,5 +1,7 @@
 html {
 	box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll
 }
 *, *:before, *:after {
 	box-sizing: inherit;
@@ -14,6 +16,8 @@ body {
   min-width: $base-min-width;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 // adaptive images
