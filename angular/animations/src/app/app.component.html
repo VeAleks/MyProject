@@ -1,13 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div [@block]="block" style="text-align:center">
+<div [@block]="block" style="text-align:center; max-width: 400px; margin: 0 auto;">
   <h1>
     Welcome to {{ title }}!
   </h1>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<div style="margin: 0 auto; max-width: 400px;">
   <h2>Here are some links to help you start: </h2>
-  <ul [@list]="list" #sdsd>
+  <ul [@list]="list">
     <li>
       <h2><a target="_blank" rel="noopener" >Tour of Heroes</a></h2>
     </li>
@@ -21,5 +19,55 @@
   <button (click)="go()">list opacity 0.4</button>
   <button (click)="stop()">list opacity 0.7</button>
   <button (click)="remove(sdsd)">list opacity 0.7</button>
+</div>
+<div>
+  <hr>
+  <h1>slide Drop</h1>
+  <button (click)="showSlideIs = !showSlideIs">show with slide effect</button>
+  <div @slideEffect *ngIf="showSlideIs">
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ad voluptate quam aperiam voluptatum! Quaerat omnis eum praesentium, voluptatibus suscipit molestias voluptate ipsam veritatis tempore laborum placeat deserunt? Veritatis, a.</li>
+      <li>Repellat modi quam, numquam minus delectus commodi odit? Sint non voluptates minima, delectus quibusdam. Architecto hic beatae cupiditate consequatur placeat, eaque nisi quam voluptatem, nobis laboriosam nesciunt perferendis officia laudantium.</li>
+      <li>Suscipit architecto temporibus fugiat atque ad, sed sapiente dicta officiis aliquid sequi nulla tenetur totam. Quisquam quam ipsam tempora cum facilis hic aliquam, numquam, dicta harum cupiditate officia, magni aperiam!</li>
+      <li>Deleniti tempore veritatis quia veniam sunt nesciunt minima fugit, officiis, earum eligendi fugiat accusantium. Assumenda explicabo ea illum inventore provident velit dolor, minima incidunt a, voluptatibus, delectus temporibus nulla id.</li>
+    </ul>
+  </div>
+  <hr>
+  <h1>fade Drop</h1>
+   <button (click)="showFadeIs = !showFadeIs">show with fade effect</button>
+  <div @fadeEffect *ngIf="showFadeIs">
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis ad voluptate quam aperiam voluptatum! Quaerat omnis eum praesentium, voluptatibus suscipit molestias voluptate ipsam veritatis tempore laborum placeat deserunt? Veritatis, a.</li>
+      <li>Repellat modi quam, numquam minus delectus commodi odit? Sint non voluptates minima, delectus quibusdam. Architecto hic beatae cupiditate consequatur placeat, eaque nisi quam voluptatem, nobis laboriosam nesciunt perferendis officia laudantium.</li>
+      <li>Suscipit architecto temporibus fugiat atque ad, sed sapiente dicta officiis aliquid sequi nulla tenetur totam. Quisquam quam ipsam tempora cum facilis hic aliquam, numquam, dicta harum cupiditate officia, magni aperiam!</li>
+      <li>Deleniti tempore veritatis quia veniam sunt nesciunt minima fugit, officiis, earum eligendi fugiat accusantium. Assumenda explicabo ea illum inventore provident velit dolor, minima incidunt a, voluptatibus, delectus temporibus nulla id.</li>
+    </ul>
+  </div>
+  <h1>Modals</h1>
+  <div class="col">
+    <button (click)="fadeModalFlag=true;  overlayFlag=true;">open Modal</button>
+  </div>
+
+</div>
+
+<div class="modal-overlay" (click)="fadeModalFlag=false;overlayFlag=false;" @fadeEffect *ngIf="overlayFlag"></div>
+<div class="modals">
+  <div #fadeModal @fadeModalEffect class="modal" *ngIf="fadeModalFlag">
+    <button (click)="fadeModalFlag=false;overlayFlag=false;">X</button>
+    <h3>Lorem ipsum dolor sit.</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, magni fuga. Repellat odit, cupiditate, optio reiciendis hic recusandae doloribus atque dolorum rerum tempora et temporibus omnis corporis id labore quis.</p>
+    <p>Sed enim quo fugit laudantium quisquam consequatur deserunt. Ullam similique fugit, labore? Deleniti repudiandae nam aut dolorem, cum sequi, quidem amet adipisci ipsam eveniet, quo tenetur, recusandae laudantium. Sunt, totam.</p>
+    <p>Fugit pariatur quia ullam voluptates id necessitatibus quas quod rerum accusantium recusandae repellat, doloremque eos culpa cumque tempora natus fuga obcaecati unde porro quidem deserunt quaerat repudiandae ipsum! Error, sequi.</p>
+    <p>Molestiae eligendi mollitia quas atque, quae ipsum recusandae distinctio, totam dolore quibusdam fugit impedit natus delectus! Quasi exercitationem incidunt qui officiis ad numquam facere. Harum a quo, assumenda. Rerum, sed!</p>
+    <p>Ipsa, saepe. Explicabo deleniti quo, optio quibusdam reiciendis nobis perferendis totam, corporis quam perspiciatis accusamus aspernatur doloremque? Aspernatur error dolore quibusdam eaque temporibus voluptatibus culpa enim, reprehenderit nihil, consequuntur assumenda.</p>
+    <p>Incidunt eum enim accusantium rerum, et, quisquam maiores aliquam modi! Tempore adipisci veniam, excepturi consequatur, dolore itaque in quos laudantium repellendus, unde dolorem non eos molestias nostrum eius possimus soluta!</p>
+    <p>Nam laborum cumque id recusandae et nihil quia amet, aperiam doloremque quos voluptas iure quo nostrum voluptates ratione, quaerat debitis ab dolore itaque in nesciunt delectus qui iusto beatae! Commodi.</p>
+    <p>Quidem numquam nostrum laudantium sit odio quasi voluptate doloribus, beatae officiis repellendus similique dolore veritatis. Alias vitae veritatis, perferendis, maiores atque sed accusantium impedit magni iure quasi ab est repellendus.</p>
+    <p>Aperiam cum soluta adipisci unde maxime, laboriosam ipsa nam, sapiente vitae quibusdam neque aspernatur repellendus dolor quae dolorem dolorum voluptate odit eligendi est voluptates corporis ad atque eveniet sed. Harum?</p>
+    <p>Assumenda aut quisquam vitae nisi dolor iste accusantium, at a itaque quam sit dolore excepturi velit in exercitationem voluptatibus illo omnis ducimus vero ab necessitatibus provident sequi maxime. Quo, delectus!</p>
+  </div>
+  <div class="modal"*ngIf="zoomModalFlag"></div>
+  <div class="modal"*ngIf="zoom2ModalFlag"></div>
+  <div class="modal"*ngIf="slideModalFlag"></div>
 </div>
 
