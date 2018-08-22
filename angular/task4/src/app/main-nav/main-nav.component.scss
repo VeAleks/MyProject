@@ -80,6 +80,7 @@ ul{
 		text-decoration: none;
 		border-color: transparent;
 		color: $green;
+		// opacity: 0;
 		@include media(">=desktop") {
 			transition:color 0.3s linear, border-color 0.3s linear;
 			color: #595959;
@@ -88,6 +89,7 @@ ul{
 			border-width: 3px 0;
 			transform: translateY(0) !important;
 			opacity: 1 !important;
+
 		}
 		&.active,
 		&:hover{

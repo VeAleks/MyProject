@@ -1,31 +1,22 @@
-ul{
-  margin: 0;
-  padding: 20px;
-  background: #f0f;
+@import '../assets/styles';
+header{
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.modal-overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  background: rgba(0,0,0,0.5);
-}
-.modal{
-  position: fixed;
-  width: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: 1001;
-  background: white;
-  padding: 30px;
-}
-.cols{
+nav{
   display: flex;
-  .col{
-
-    margin: 0 15px;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  a{
+    margin: 0 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    &:hover,
+    &.active{
+      color: $blue;
+    }
   }
 }

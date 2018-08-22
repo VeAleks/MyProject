@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Modals</h1>
+  <div class="col">
+    <button (click)="fadeModalFlag=true;  overlayFlag=true;">open Modal</button>
+  </div>
+  <div class="modals">
+    <div #fadeModal @fadeModalEffect class="modal" *ngIf="fadeModalFlag">
+      <button (click)="fadeModalFlag=false;overlayFlag=false;">X</button>
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, natus!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab reprehenderit harum laborum repellat unde dolorem repudiandae iusto ut suscipit modi impedit incidunt maxime ullam inventore, dignissimos molestias eaque ducimus nam.</p>
+    </div>
+    <div class="modal"*ngIf="zoomModalFlag"></div>
+    <div class="modal"*ngIf="zoom2ModalFlag"></div>
+    <div class="modal"*ngIf="slideModalFlag"></div>
+  </div>
+  
+  <div class="modal-overlay" (click)="fadeModalFlag=false;overlayFlag=false;" @fadeEffect *ngIf="overlayFlag"></div>
+</div>

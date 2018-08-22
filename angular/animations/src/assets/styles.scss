@@ -1,0 +1,29 @@
+$blue: #3983d2;
+$blueHover: darken(#3983d2, 10%);
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1{
+  font-size: 40px;
+  line-height: 1.2;
+  margin: 0 0 1em;
+}
+button{
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background: $blue;
+  border-radius: 6px;
+  transition:background 0.3s linear;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover{
+    background: $blueHover;
+  }
+}

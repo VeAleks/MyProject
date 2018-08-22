@@ -1,0 +1,20 @@
+@import '../../assets/styles';
+:host{
+  display: block;
+}
+ul{
+  margin: 0;
+  padding: 20px;
+  background: #aaa;
+  list-style: none;
+}
+section{
+  display: flex;
+}
+article{
+  margin: 0 20px;
+  width: 50%;
+}
+button{
+  min-width: 150px;
+}
