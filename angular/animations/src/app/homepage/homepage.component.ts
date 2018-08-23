@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { pageAnimationTrigger, showListTrigger, showBlockTrigger } from '../animations';
+import { pageAnimationTrigger} from '../animations';
+import { showListTrigger, showBlockTrigger } from './animations';
 import {AnimationBuilder} from '@angular/animations';
 import { Router, NavigationEnd } from '@angular/router';
 
@@ -18,13 +19,12 @@ export class HomepageComponent implements OnInit {
   @HostBinding('@routerAnimation') routerAnimation = true;
   title = 'app';
   list;
+  listState = false;
+  isLoadHomepage = false;
   blockAnimation: any = 'sd';
-  go() {
-    this.list = 'red';
-  }
-  stop() {
-    this.list = 'blue';
-  }
+  blockState = false;
+
+  
   constructor(private router: Router) {
     router.events.subscribe((val) => {
       if(val instanceof NavigationEnd) {
@@ -36,7 +36,26 @@ export class HomepageComponent implements OnInit {
   }
 
   ngOnInit() {
-  console.log()
+  }
+  startAnimation() {
+    this.blockState = true;
+  }
+  backAnimation() {
+    this.blockState = false;
+  }
+  resetColor() {
+    this.listState = false;
+  }
+  startListAnimation() {
+    this.list = 'listOpacity';
+    this.listState = true;
+  }
+  endListAnimation() {
+    this.list = 'default';
+    if(this.listState){
+      this.list = 'listOpacity';
+    }
+
   }
 
 }

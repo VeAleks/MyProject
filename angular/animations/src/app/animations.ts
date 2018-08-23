@@ -1,4 +1,4 @@
-import {trigger, state, style, animate, transition, sequence,  query, stagger, group } from '@angular/animations';
+import {trigger, state, style, animate, transition, sequence,  query, stagger, keyframes, group } from '@angular/animations';
 
 
 let optionsHidePage = { 
@@ -22,30 +22,6 @@ export const pageAnimationTrigger = trigger('routerAnimation', [
   transition(':leave', [
     style(optionsShowPage),
     animate('0.5s ease-in-out', style(optionsHidePage))
-  ])
-])
-
-
-export const showListTrigger = trigger('list', [
-  state('red', style({
-    color: '#f00'
-  })),
-  state('blue', style({
-    color: '#00f'
-  })),
-  transition(':enter', [
-    style({ opacity: 0}),
-    animate('0.3s')
-  ]),
-  transition('*=>*', animate(500))
-])
-
-export const showBlockTrigger = trigger('block', [
-  transition('*=>init', [ // each time the binding value changes
-    query('h1, img, button', style({ opacity: 0 })),
-    query('h1, img, button', [
-      stagger(300, [ animate('0.3s 2s', style({ opacity: 1 })) ]), 
-    ]),
   ])
 ])
 
