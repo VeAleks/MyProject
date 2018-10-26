@@ -12,8 +12,9 @@ import { Router, NavigationEnd } from '@angular/router';
   animations: [
     pageAnimationTrigger,
     showListTrigger,
-    showBlockTrigger
-  ]
+    showBlockTrigger,
+  ],
+  host: { '(@routerAnimation.done)': 'routerAnimationEnd($event)' }
 })
 export class HomepageComponent implements OnInit {
   @HostBinding('@routerAnimation') routerAnimation = true;
@@ -23,39 +24,39 @@ export class HomepageComponent implements OnInit {
   isLoadHomepage = false;
   blockAnimation: any = 'sd';
   blockState = false;
+  buttonState = false;
+
 
   
   constructor(private router: Router) {
     router.events.subscribe((val) => {
       if(val instanceof NavigationEnd) {
-        console.log(this) 
-        this.blockAnimation = 'init'
-
+         console.log(val);
       } else return;
     })
   }
 
   ngOnInit() {
   }
+  toggleButtonState() {
+    this.buttonState = !this.buttonState;
+  }
   startAnimation() {
     this.blockState = true;
+    this.toggleButtonState();
   }
   backAnimation() {
     this.blockState = false;
+    this.toggleButtonState();
   }
   resetColor() {
-    this.listState = false;
+    this.list = 'default';
   }
   startListAnimation() {
     this.list = 'listOpacity';
-    this.listState = true;
   }
-  endListAnimation() {
-    this.list = 'default';
-    if(this.listState){
-      this.list = 'listOpacity';
-    }
-
+  routerAnimationEnd(e) {
+    setTimeout(()=> { this.blockState = true } , 300)
   }
 
 }

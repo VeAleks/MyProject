@@ -9,7 +9,7 @@ ul{
   list-style: none;
 }
 section{
-  display: flex;
+  // display: flex;
 }
 article{
   margin: 0 20px;
@@ -17,4 +17,14 @@ article{
 }
 button{
   min-width: 150px;
+}
+.items{
+  display: flex;
+  .post{
+    width: 300px;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #f00;
+    background: #aaa;
+  }
 }

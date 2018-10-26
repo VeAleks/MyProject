@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { pageAnimationTrigger, fadeEffectTrigger, slideEffectTrigger } from '../animations';
+import { OpenCloseService } from './open-close.service';
 
 @Component({
   selector: 'app-open-close',
@@ -9,22 +10,32 @@ import { pageAnimationTrigger, fadeEffectTrigger, slideEffectTrigger } from '../
     pageAnimationTrigger,
     fadeEffectTrigger,
     slideEffectTrigger
-  ]
+  ],
+  providers: [OpenCloseService]
 })
 export class OpenCloseComponent implements OnInit {
   @HostBinding('@routerAnimation') routeAnimation = true;
   showSlideIs: boolean = false;
-  showSlideIs2: boolean = false;
   showFadeIs: boolean = false;
+  data: any[];
+
+
  
-  constructor() { }
+  constructor(private openCloseService: OpenCloseService) { }
 
   ngOnInit() {
+     this.data = this.openCloseService.items;
+     console.log(this.data);
   }
-  openSlide(e) {
-    let flag = false;
-    flag = !flag;
+  openSlide(e, a) {
+    // let flag = false;
+    // flag = !flag;
     console.log(e);
+    console.log(this.data[e].flag);
+    this.data[e].flag = !this.data[e].flag;
+  }
+  clickItem(e, item) {
+    console.log(e, item);
   }
 
 }

@@ -27,7 +27,6 @@ export class ModalsComponent implements OnInit {
   constructor(private modalService: ModalService ) { }
 
   ngOnInit() {
-    console.log(this.modalService)
     this.data = this.modalService;
   }
 
