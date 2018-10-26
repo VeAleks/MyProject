@@ -1,5 +1,6 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { pageAnimationTrigger, fadeEffectTrigger, slideEffectTrigger } from '../animations';
+import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
+import { pageAnimationTrigger } from '../page-animations';
+import { fadeEffectTrigger, slideEffectTrigger } from './animations';
 import { OpenCloseService } from './open-close.service';
 
 @Component({
@@ -24,18 +25,12 @@ export class OpenCloseComponent implements OnInit {
   constructor(private openCloseService: OpenCloseService) { }
 
   ngOnInit() {
+    console.log(this)
      this.data = this.openCloseService.items;
-     console.log(this.data);
-  }
-  openSlide(e, a) {
-    // let flag = false;
-    // flag = !flag;
-    console.log(e);
-    console.log(this.data[e].flag);
-    this.data[e].flag = !this.data[e].flag;
-  }
-  clickItem(e, item) {
-    console.log(e, item);
+
   }
 
+  @HostListener('click') onClickEnter() {
+      console.log(this)
+  }
 }

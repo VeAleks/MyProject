@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { pageAnimationTrigger} from '../animations';
+import { pageAnimationTrigger} from '../page-animations';
 import { showListTrigger, showBlockTrigger } from './animations';
 import {AnimationBuilder} from '@angular/animations';
 import { Router, NavigationEnd } from '@angular/router';

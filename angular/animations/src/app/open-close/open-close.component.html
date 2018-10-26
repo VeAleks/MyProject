@@ -33,10 +33,10 @@
     <div class="items">
       <article class="post" *ngFor="let item of data; let i = index">
         <h3>{{item.title}}</h3>
-        <button (click)="openSlide(i)">more</button>
-        <ng-container *ngIf="item.flag">
+        <button (click)="item.flag = !item.flag">more</button>
+        <div @slideEffect *ngIf="item.flag">
           <p *ngFor="let paragraph of item.text">{{paragraph}}</p>
-        </ng-container>
+        </div>
       </article>
     </div>
   </section>

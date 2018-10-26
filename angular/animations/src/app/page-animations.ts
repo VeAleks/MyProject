@@ -13,6 +13,7 @@ let optionsShowPage = {
   background: 'white',
   transform: 'translateX(0)'
 };
+let duration = 250;
 
 export const pageAnimationTrigger = trigger('routerAnimation', [
   transition(':enter', [
@@ -28,10 +29,10 @@ export const pageAnimationTrigger = trigger('routerAnimation', [
 export const fadeEffectTrigger = trigger('fadeEffect', [
   transition(':enter', [
     style({ opacity: 0 }),
-    animate(400)
+    animate(duration)
   ]),
   transition(':leave', [
-    animate(400, style({ opacity: 0, }))
+    animate(duration, style({ opacity: 0, }))
   ])
 ])
 
@@ -41,31 +42,31 @@ export const slideEffectTrigger = trigger('slideEffect', [
       height: 0,
       overflow: "hidden",
     }),
-    animate(400, style({ height: '*' }))
+    animate(duration, style({ height: '*' }))
   ]),
   transition(':leave', [
     style({ 
       height: '*',
       overflow: 'hidden',
     }),
-    animate(400, style({ height: 0, }))
+    animate(duration, style({ height: 0, }))
   ])
 ]);
 export const fadeModalEffectTrigger = trigger('fadeModalEffect', [
   transition(':enter', [
     style({ opacity: 0 }),
-    animate(400)
+    animate(duration)
   ]),
   transition(':leave', [
-    animate(400, style({ opacity: 0 }))
+    animate(duration, style({ opacity: 0 }))
   ])
 ])
 export const zomeModalEffectTrigger = trigger('zomeModalEffect', [
   transition(':enter', [
     style({ transform: 'scale(0)' }),
-    animate(400, style({ transform: 'scale(1)' }))
+    animate(duration, style({ transform: 'scale(1)' }))
   ]),
   transition(':leave', [
-    animate(400, style({ transform: 'scale(0)' }))
+    animate(duration, style({ transform: 'scale(0)' }))
   ])
 ])

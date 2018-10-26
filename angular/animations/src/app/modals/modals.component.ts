@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable, HostBinding } from '@angular/core';
-import { pageAnimationTrigger, fadeEffectTrigger, fadeModalEffectTrigger, zomeModalEffectTrigger} from '../animations';
+import { pageAnimationTrigger, fadeEffectTrigger, fadeModalEffectTrigger, zomeModalEffectTrigger} from '../page-animations';
 import { ModalService } from './modal.service';
 
 
